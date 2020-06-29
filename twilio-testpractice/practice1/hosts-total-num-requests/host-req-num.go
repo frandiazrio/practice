@@ -6,10 +6,11 @@ import (
 	"log"
 	"os"
 	"strings"
+	"strconv"
 	
 )
 
-func hostsRequests(logfile string)map[string]int {
+func hostsRequests(logfile string) {
 	f, err := os.Open(logfile)
 	defer f.Close()
 	if err != nil {
@@ -23,20 +24,27 @@ func hostsRequests(logfile string)map[string]int {
 		
 		tmp := strings.Split(line, "- -")
 		url := tmp[0]
-		fields := strings.Split(url,".")
-		hostname := fields[len(fields)-2]
-		if err != nil{
-			log.Fatal(err)
-		}
+	
 
-		mp[hostname]++
+		mp[url]++
 
 	}
 
-	return mp
+	file, err := os.Create("records_filename")
+	defer file.Close()
+	if err != nil{
+		log.Fatal(err)
+	}
+
+	
+	for hosts,num := range mp{
+		file.WriteString(hosts+" "+strconv.Itoa(num)+"\n")
+	}
+
+	fmt.Println(mp)
 
 }
 
 func main() {
-	fmt.Println(hostsRequests("logfile.txt"))
+	hostsRequests("logfile.txt")
 }

@@ -13,7 +13,6 @@ func ksub(arr []int, k int)int{
 	for i:=0; i< len(arr); i++{
 		sum = sum + arr[i]
 		sum%= k
-
 		if sum < 0{
 			sum += k
 		} // check for negative indices
@@ -34,4 +33,6 @@ func main(){
 	fmt.Println(ksub([]int{-5}, 5))
 	fmt.Println(ksub([]int{7,4,-10}, 5))
 	fmt.Println(ksub([]int{4,5,0,-2,-3,1}, 5))
+
+	fmt.Println(-9%5)
 }
