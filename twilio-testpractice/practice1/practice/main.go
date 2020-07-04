@@ -19,6 +19,6 @@ func main() {
 	fmt.Println(node.Val)
 	l.Remove(node)
 	l.Print()
-	fmt.F
+	//fmt.F
 	//ch := make(chan int)
 }
