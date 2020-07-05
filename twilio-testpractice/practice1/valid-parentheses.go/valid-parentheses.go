@@ -47,5 +47,5 @@ func IsValid(p string)bool{
 }
 
 func main(){
-	fmt.Println(IsValid("((({})))"))
+	fmt.Println(IsValid("((([]{})))"))
 }
