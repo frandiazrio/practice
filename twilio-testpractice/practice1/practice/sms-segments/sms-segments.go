@@ -14,16 +14,16 @@ func sms_maker(sms string) []string {
 
 	// 160 - 5 "(%d/%d)" -1 for space
 	for len(sms) > 155 {
-		segment := sms[:156]
+		segment := sms[:155]
 		res = append(res, segment)
-		sms = sms[156:]
+		sms = sms[155:]
 	}
 
 	res = append(res, sms)
 	// for every segment add segment suffix to string
 	for i := 0; i < len(res); i++ {
 		seg := fmt.Sprintf("(%d/%d)", i+1, len(res))
-		res[i] = fmt.Sprintf("%s %s", res[i], seg)
+		res[i] = fmt.Sprintf("%s%s", res[i], seg)
 	}
 
 	return res
