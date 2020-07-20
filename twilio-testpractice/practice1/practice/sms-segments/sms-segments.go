@@ -32,7 +32,6 @@ func sms_maker(sms string) []string {
 func main() {
 
 	// testing
-
 	message1 := "Hello, this is a test message."
 	message2 := "On the far-away island of Sala-ma-Sond, Yertle the Turtle was king of the pond. A nice little pond. It was clean. It was neat. The water was warm. There was plenty to eat. The turtles had everything turtles might need. And they were all happy. Quite happy indeed."
 	expected1 := []string{"Hello, this is a test message."}

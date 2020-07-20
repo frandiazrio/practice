@@ -1,4 +1,4 @@
-/ This problem can be solved by solving its sub-problems.
+// This problem can be solved by solving its sub-problems.
 // Given 'code' and a dictionary ['c', 'od', 'e', 'y']
 // We check if any sub-word in the string exists in the dictionary.
 // Based on that, we update a map for future lookups:
@@ -10,6 +10,9 @@
 //
 // T: O(n^2) as the recursion tree can grow up to n^2
 // S: O(n)
+
+package main
+import "fmt"
 func wordBreak(s string, wordDict []string) bool {
 	dict := make(map[string]struct{}, len(wordDict))
 
