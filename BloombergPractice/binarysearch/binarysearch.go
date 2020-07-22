@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// Sample program for a binary search (recursive)
 func BinarySearch(arr []int, target int) (int, error) {
 	lo := 0
 	hi := len(arr) - 1
