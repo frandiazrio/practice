@@ -38,6 +38,7 @@ func ksub(arr []int, k int) int {
 		res += kmap[sum]
 
 		kmap[sum]++
+		fmt.Println(res)
 
 	}
 
@@ -48,10 +49,10 @@ func ksub(arr []int, k int) int {
 }
 
 func main() {
-	fmt.Println(ksub([]int{5, 10, 11, 9, 5}, 5))
-	fmt.Println(ksub([]int{-5}, 5))
-	fmt.Println(ksub([]int{7, 4, -10}, 5))
+	//fmt.Println("Total", ksub([]int{5, 10, 11, 9, 5}, 5))
+	//fmt.Println(ksub([]int{-5}, 5))
+	//fmt.Println(ksub([]int{7, 4, -10}, 5))
 	fmt.Println(ksub([]int{4, 5, 0, -2, -3, 1}, 5))
 
-	fmt.Println(-9 % 5)
+	//fmt.Println(-9 % 5)
 }
