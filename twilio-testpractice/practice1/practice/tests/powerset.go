@@ -21,7 +21,7 @@ func powerset(set []string) [][]string {
 }
 
 func main() {
-	set := []string{"5","10", "11", "9", "5"}
+	set := []string{"5", "10", "11", "9", "5"}
 	fmt.Println(powerset(set))
 
 }

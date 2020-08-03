@@ -1,10 +1,8 @@
 // C(n,r) = C(n-1,r-1) + C(n-1, r)
 
-
 package main
 
 import "fmt"
-
 
 func Choose(n, k int64) int64 {
 	if k > n {
@@ -30,11 +28,10 @@ func Choose(n, k int64) int64 {
 	return ret
 }
 
-
-func main(){
+func main() {
 	var n int64 = 5
 	var k int64 = 0
-	for k=0; k <=n; k++{
-		fmt.Println(Choose(n,k))
+	for k = 0; k <= n; k++ {
+		fmt.Println(Choose(n, k))
 	}
 }
